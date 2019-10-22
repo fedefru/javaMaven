@@ -12,18 +12,19 @@ public class GreetingController {
 
 	@GetMapping("/operaciones")
     public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Cuentas());
+        model.addAttribute("cuentas", new Cuentas());
         return "operaciones";
     }
 
     @PostMapping("/operaciones")
-    public String greetingSubmit(@ModelAttribute Cuentas greeting, float n1, float n2, 
-    		float n3, float n4, float n5, float n6, float n7, float n8) {
-    	greeting.suma(n1,n2);
-    	greeting.resta(n3, n4);
-    	greeting.multiplicacion(n5,n6);
-    	greeting.division(n7,n8);
+    public String greetingSubmit(@ModelAttribute Cuentas cuentas, float sum1, float sum2,float resta1,float resta2,float mult1,float mult2,float div1,float div2) {
+    	cuentas.suma(sum1,sum2);
+    	cuentas.resta(resta1, resta2);
+    	cuentas.multiplicacion(mult1,mult2);
+    	cuentas.division(div1,div2);
         return "operaciones";
     }
+    
+ 
 
 }

@@ -1,21 +1,20 @@
 <!DOCTYPE HTML>
-<html>
-<head> 
-    <title>Getting Started: Serving Web Content</title> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculadora</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-
-<h1>Ingreso Datos</h1>
-    <form action="#" th:action="@{/Cuentas}" th:object="${Cuentas}" method="post">
-		<p>Suma : <input type="text" size="3" th:field="*{n1}" /> + <input type="text" size="3" th:field="*{n2}"/ 
-		th:text="' =  ' + ${Cuentas.rtaS}"</p>
-		<p>Resta : <input type="text" size="3" th:field="*{n3}" /> - <input type="text" size="3" th:field="*{n4}"/ 
-		th:text="' =  ' + ${Cuentas.rtaR}"</p>
-		<p>Multiplicacion : <input type="text" size="3" th:field="*{n5}" /> * <input type="text" size="3" th:field="*{n6}"/ 
-		th:text="' =  ' + ${Cuentas.rtaM}"</p>
-		<p>Division : <input type="text" size="3" th:field="*{n7}" /> / <input type="text" size="3" th:field="*{n8}"/ 
-		th:text="' =  ' + ${Cuentas.rtaD}"</p>
+	<h1>Ingreso Datos</h1>
+    <form action="#" th:action="@{/operaciones}" th:object="${cuentas}" method="post">
+		<p>Suma : <input type="text" size="3" th:field="*{sum1}" /> + <input type="text" size="3" th:field="*{sum2}"/ 
+		th:text="' =  ' + ${cuentas.rtaS}"</p>
+		<p>Resta : <input type="text" size="3" th:field="*{resta1}" /> - <input type="text" size="3" th:field="*{resta2}"/ 
+		th:text="' =  ' + ${cuentas.rtaR}"</p>
+		<p>Multiplicacion : <input type="text" size="3" th:field="*{mult1}" /> * <input type="text" size="3" th:field="*{mult2}"/ 
+		th:text="' =  ' + ${cuentas.rtaM}"</p>
+		<p>Division : <input type="text" size="3" th:field="*{div1}" /> / <input type="text" size="3" th:field="*{div2}"/ 
+		th:text="' =  ' + ${cuentas.rtaD}"</p>
 		
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
